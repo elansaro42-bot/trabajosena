@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENA TIK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="quiz">
+    <h2>Pregunta del día</h2>
+    <p id="pregunta"></p>
+    <div class="opciones">
+      <button onclick="responder('A')">A) <span id="opA"></span></button>
+      <button onclick="responder('B')">B) <span id="opB"></span></button>
+      <button onclick="responder('C')">C) <span id="opC"></span></button>
+      <button onclick="responder('D')">D) <span id="opD"></span></button>
+    </div>
+    <p id="resultado"></p>
+  </div>
+
+  <!-- Mensaje emergente de bienvenida -->
+  <div id="bienvenida" class="popup">
+    👋 Bienvenido al portal académico SENA
+    <p>Hoy avanzas un paso más en tu aprendizaje.</p>
+  </div>
+
+
+
+<nav id="barra-superior">
+  <ul>
+    <li><button id="btn-modo-nocturno">🌙 Activar modo nocturno</button></li>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#calendario">Calendario</a></li>
+    <li><a href="#clase10">Última clase</a></li>
+  </ul>
+</nav>
+
+
+<!-- Contenido principal -->
+<section id="inicio">
+</section>
+
+<header>
+    <img src="descarga.png" alt="Logo sena" class="logo">
+    <p id="hora-actual"></p>
+    <h1>Hola genios</h1>
+    <h2>Aquí encontrarás todas mis clases del SENA</h2>
+    <!-- Ícono calendario -->
+    <span class="calendar-icon" id="calendarIcon">📅</span>
+      <!-- Día 13: Contenedor para la fecha -->
+         <p id="fecha-actual"></p>
+</header>
+    
+<section id="busqueda">
+    <input type="text" id="searchInput" placeholder="Buscar clase...">
+    <button id="searchBtn">Buscar</button>
+</section>
+
+<button id="btn-ultima-clase">ir a ultima clase</button>
+
+<section id="clases">
+    <article>
+        <h2>Clase 1: Introducción</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Martes 21/04/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> En esta primera sesión se presentó la estructura del curso, los objetivos y la importancia de la formación en TIK dentro del SENA. Se habló de cómo la tecnología transforma la educación, se explicó el rol del estudiante como protagonista de su aprendizaje y se dio un vistazo a las herramientas digitales que se usarán. Fue un espacio de motivación y de apertura hacia el mundo de la programación.</p>
+    </article>
+
+    <article>
+        <h2>Clase 2: Componentes básicos dentro de un portátil</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Jueves 23/04/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se realizó un ejercicio práctico de desarmar un portátil. Se identificaron piezas como batería, tarjeta madre, ventiladores, memoria RAM y disco duro. Además de reconocer cada componente, se explicó su función y cómo interactúan entre sí. Esta práctica permitió comprender la base física de la informática y la importancia del mantenimiento preventivo.</p>
+        <img src="7e2c727c-2702-45ac-9806-6d5aa9b3ee54.jpg" alt="Imagen Clase 2">
+    </article>
+
+    <article>
+        <h2>Clase 3: Conocer la programación</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Martes 28/04/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se introdujo el concepto de programación y su lógica. Se explicó cómo los lenguajes de programación permiten transformar ideas en soluciones digitales. Se escribieron las primeras líneas en HTML, entendiendo etiquetas, estructura básica y cómo se construye una página web. Fue el primer paso hacia el desarrollo web.</p>
+    </article>
+
+    <article>
+        <h2>Clase 4: Crear página web</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Jueves 30/04/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se profundizó en HTML, agregando más etiquetas y organizando el contenido en secciones. Se habló de la importancia de la coherencia y la jerarquía visual. Se planteó cómo una página web no solo muestra información, sino que debe tener propósito y estructura clara. Aquí nació el proyecto académico personal.</p>
+    </article>
+
+    <article>
+        <h2>Clase 5: Página SENA TIK</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Martes 05/05/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se definió el proyecto principal: un portal académico para registrar cada clase. Se discutió la idea de documentar sesiones con fecha, instructor y descripción. Se resaltó la importancia de la identidad institucional (logo, colores) y se planteó que este portal será el núcleo del aprendizaje, mejorado día a día con estilos y funciones.</p>
+    </article>
+
+    <article id="clase6">
+        <h2>Clase 6: Investigación de cosas básicas</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Martes 12/05/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se investigaron plataformas educativas como Moodle y Microsoft Teams. Se identificaron problemas comunes: falta de capacitación, desorganización y baja participación. Se propusieron estrategias de mejora: comunicación constante, uso de herramientas interactivas y capacitación digital. La conclusión fue que la educación virtual depende más del uso adecuado de la tecnología que de la tecnología misma.</p>
+    </article>
+
+    <article id="clase7">
+        <h2>Clase 7: Pausa activa</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Jueves 14/05/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Se vio una película toda la jornada como actividad de pausa activa.</p>
+    </article>
+
+    <article id="clase8">
+        <h2>Clase 8: fichas tecnicas</h2>
+        <p><strong>Instructor:</strong> Ivone</p>
+        <p><strong>Horario:</strong> Martes 19/05/2026 12:30 p.m.</p>
+        <p><strong>Descripción:</strong> Una ficha técnica de un computador portátil es un documento breve que reúne en un solo lugar las especificaciones más importantes del equipo, como la marca y modelo, el procesador con su velocidad y núcleos, la cantidad de memoria RAM instalada y máxima soportada, el tipo y capacidad de almacenamiento, las características de la pantalla como tamaño y resolución, la tarjeta gráfica si es integrada o dedicada, la conectividad con puertos y tecnologías inalámbricas, el sistema operativo instalado, la capacidad de la batería y su duración estimada, además de datos de garantía y observaciones de mantenimiento; todo esto permite comparar equipos, planear reparaciones y tener un registro técnico confiable..</p>
+    </article>
+
+<article id="clase9">
+                <h2>Clase 9: Principales productos del trabajo del egresado en tecnología</h2>
+                <p><strong>Instructor:</strong> Ivone</p>
+                <p><strong>Horario:</strong> Jueves 21/05/2026 12:30 p.m.</p>
+                <p><strong>Descripción:</strong> El egresado en el área tecnológica desarrolla y entrega productos clave que garantizan el buen funcionamiento de los sistemas de información y equipos de cómputo. Entre ellos se incluyen el inventario de activos tecnológicos, la revisión y corrección de equipos, la puesta en operación de computadores, la elaboración de reportes de diagnóstico, las fichas técnicas de equipos y redes, las actas de aprobación de mantenimiento, la documentación técnica y normativa y el respaldo físico o en la nube de la información institucional. Estos productos reflejan la responsabilidad profesional del egresado y su aporte a la gestión tecnológica.</p>
+</article>
+
+<article id="clase10">
+<h2>Clase 10: Podcast</h2>
+<p><strong>Instructor:</strong> Ivone</p>
+<p><strong>Horario:</strong> Martes 26/05/2026 12:30 p.m.</p>
+<p><strong>Descripción:</strong> Se empezó a escribir el guion para un podcast enfocado en temas relacionados con la informática y la tecnología. El contenido abordará aspectos fundamentales como el software, el hardware, los sistemas operativos y el mantenimiento de computadores, explicando sus funciones, características e importancia en el uso cotidiano de los equipos informáticos.
+Durante la elaboración del guion se organizaron los temas principales, definiendo una estructura que permita presentar la información de manera clara, dinámica y comprensible para la audiencia. Además, se planteó incluir ejemplos prácticos y situaciones reales que faciliten la comprensión de los conceptos técnicos.
+El objetivo del podcast es brindar conocimientos básicos sobre el funcionamiento de los computadores, promover buenas prácticas de mantenimiento y ayudar a los oyentes a comprender la relación entre los componentes físicos y los programas que permiten el funcionamiento de los sistemas informáticos.</p>
+</article>
+
+<article id="clase11">
+<h2>Clase 11: Entrega de trabajos</h2>
+<p><strong>Instructor:</strong> Ivone</p>
+<p><strong>Horario:</strong> Jueves 28/05/2026 12:30 p.m.</p>
+<p><strong>Descripción:</strong> Se entregaron los trabajos que la instructora había asignado durante las tres últimas clases del SENA y que aún estaban pendientes de finalización. Entre las actividades entregadas se encontraba la ficha técnica del computador, en la cual se registraron las características y especificaciones del equipo, así como la recopilación de datos importantes relacionados con sus componentes de hardware y software.
+Además, se revisó que toda la información estuviera completa y organizada correctamente antes de su entrega. Esta actividad permitió reforzar los conocimientos sobre la identificación de las partes del computador, el análisis de sus características técnicas y la importancia de llevar un registro adecuado de la información de los equipos informáticos.</p>
+</article>
+
+<article id="clase12">
+<h2>Clase 12: Comprobacion de datos</h2>
+<p><strong>Instructor:</strong> Ivone</p>
+<p><strong>Horario:</strong> Martes 02/06/2026 12:30 p.m.</p>
+<p><strong>Descripción:</strong> Hoy en la Clase 12 del SENA se exigió a los aprendices enviar los datos personales faltantes, como identificación y registros académicos, con el fin de garantizar que toda la información esté completa y actualizada para el trabajo final. Esta actividad fue fundamental porque asegura la validez de los procesos institucionales y permite que cada estudiante esté correctamente registrado en el sistema. Además, se trabajó en la elaboración de la ficha técnica de tres computadores, donde se documentaron aspectos como marca, modelo, procesador, memoria RAM, capacidad de almacenamiento, sistema operativo y estado físico de los equipos. Este ejercicio práctico permitió aplicar los conocimientos adquiridos en clases anteriores sobre documentación técnica y reforzó la importancia de registrar información clara y estandarizada. La jornada también sirvió para reflexionar sobre la responsabilidad en el manejo de datos y la necesidad de precisión en cada registro, ya que cualquier error puede afectar el desarrollo del proyecto final. En conclusión, la Clase 12 se convirtió en un espacio clave de validación de información y práctica técnica, aportando directamente a la preparación del trabajo final del SENA y fortaleciendo las competencias de los aprendices en gestión de datos y documentación de equipos.</p>
+</article>
+<hr class="linea-divisoria">
+
+<!-- Calendario visual multi-mes con animación (Día 12) -->
+<section id="calendario">
+    <h2>Calendario Academico</h2>
+    
+
+    <!-- Botones de navegación -->
+    <div id="calendarNav">
+        <button onclick="mostrarMes('abril')">Abril</button>
+        <button onclick="mostrarMes('mayo')">Mayo</button>
+        <button onclick="mostrarMes('junio')">Junio</button>
+    </div>
+
+    <!-- Abril -->
+    <div id="abril" class="mes">
+        <h3>Abril 2026</h3>
+        <div class="calendar-grid">
+            <div class="day clase">21<br>Clase 1<br>12:30 p.m.</div>
+            <div class="day clase">23<br>Clase 2<br>12:30 p.m.</div>
+            <div class="day clase">28<br>Clase 3<br>12:30 p.m.</div>
+            <div class="day clase">30<br>Clase 4<br>12:30 p.m.</div>
+        </div>
+    </div>
+
+    <!-- Mayo -->
+    <div id="mayo" class="mes" style="display:none;">
+        <h3>Mayo 2026</h3>
+        <div class="calendar-grid">
+            <div class="day clase">5<br>Clase 5<br>12:30 p.m.</div>
+            <div class="day clase">12<br>Clase 6<br>12:30 p.m.</div>
+            <div class="day clase">14<br>Clase 7<br>12:30 p.m.</div>
+            <div class="day clase">19<br>Clase 8<br>12:30 p.m.</div>
+            <div class="day clase">21<br>Clase 9<br>12:30 p.m.</div>
+            <div class="day clase">26<br>Clase 10<br>12:30 p.m.</div>
+            <div class="day clase">28<br>Clase 11<br>12:30 p.m.</div>
+        </div>
+    </div>
+
+    <!-- Junio -->
+    <div id="junio" class="mes" style="display:none;">
+        <h3>Junio 2026</h3>
+        <div class="calendar-grid">
+            <div class="day clase">2<br>Clase 12<br>12:30 p.m.</div>
+        </div>
+    </div>
+
+    <div id="motivacion">
+  <h2>Frase del día</h2>
+  <p id="frase"></p>
+</div>
+</section>
+
+<!-- Script búsqueda y calendario -->
+<script>
+    // Funcionalidad de búsqueda (Día 9)
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+    const articles = document.querySelectorAll("#clases article");
+
+    function filtrarClases() {
+        let texto = searchInput.value.toLowerCase();
+        articles.forEach(article => {
+            let contenido = article.innerText.toLowerCase();
+            if (contenido.includes(texto)) {
+                article.style.display = "block";
+            } else {
+                article.style.display = "none";
+            }
+        });
+    }
+
+    searchBtn.addEventListener("click", filtrarClases);
+    searchInput.addEventListener("keyup", filtrarClases);
+
+    // Activación calendario con animación (Día 12)
+    const calendarIcon = document.getElementById("calendarIcon");
+    const calendar = document.getElementById("calendario");
+
+    calendarIcon.addEventListener("click", () => {
+        if (calendar.classList.contains("visible")) {
+            calendar.classList.remove("visible");
+            setTimeout(() => {
+                calendar.style.display = "none";
+            }, 500);
+        } else {
+            calendar.style.display = "block";
+            setTimeout(() => {
+                calendar.classList.add("visible");
+            }, 10);
+        }
+    });
+
+    // Navegación entre meses (Día 11)
+    function mostrarMes(mesId) {
+        const meses = document.querySelectorAll(".mes");
+        meses.forEach(mes => {
+            mes.style.display = "none";
+        });
+        document.getElementById(mesId).style.display = "block";
+    }
+
+  // Día 13: Mostrar fecha actual automáticamente
+  const fechaElemento = document.getElementById("fecha-actual");
+  const hoy = new Date();
+
+  // Opciones para mostrar la fecha en español
+  const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+  // Convertir fecha a texto
+  fechaElemento.textContent = "Hoy es " + hoy.toLocaleDateString('es-ES', opciones);
+
+  // Día 15: Mostrar solo la hora actual
+  function actualizarHora() {
+    const horaElemento = document.getElementById("hora-actual");
+    const ahora = new Date();
+
+    // Opciones para mostrar la hora en formato 24h
+    const opciones = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+    horaElemento.textContent = ahora.toLocaleTimeString('es-ES', opciones);
+  }
+
+  // Actualizar cada segundo
+  setInterval(actualizarHora, 1000);
+
+  // Llamada inicial
+  actualizarHora();
+
+  // Día 17: Botón dinámico a última clase actual
+  document.getElementById("btn-ultima-clase").addEventListener("click", function() {
+    // Selecciona todas las clases del listado
+    const clases = document.querySelectorAll("#clases article");
+
+    if (clases.length > 0) {
+      // Obtiene la última clase actual
+      const ultimaClase = clases[clases.length - 1];
+
+      // Hace scroll hasta la última clase
+      ultimaClase.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      // Resalta la última clase para identificarla
+      ultimaClase.classList.add("resaltada");
+    }
+  });
+
+  // Día 18: Mostrar calendario automáticamente al cargar
+  window.addEventListener("DOMContentLoaded", function() {
+    const calendario = document.getElementById("calendario");
+    calendario.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  const btnModoNocturno = document.getElementById("btn-modo-nocturno");
+  btnModoNocturno.addEventListener("click", function() {
+    document.body.classList.toggle("modo-nocturno");
+    document.getElementById("barra-superior").classList.toggle("modo-nocturno");
+    document.getElementById("calendario").classList.toggle("modo-nocturno");
+
+    // Cambiar texto del botón
+    if (document.body.classList.contains("modo-nocturno")) {
+      btnModoNocturno.textContent = "☀️ Desactivar modo nocturno";
+    } else {
+      btnModoNocturno.textContent = "🌙 Activar modo nocturno";
+    }
+  });
+  
+  window.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("bienvenida");
+
+    // Mostrar el mensaje
+    popup.classList.add("mostrar");
+
+    // Después de 4 segundos, aplicar desvanecer
+    setTimeout(() => {
+      popup.classList.add("ocultar");
+    }, 4000);
+
+    // Después de 5 segundos, ocultar completamente
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 5000);
+  });
+
+  const frases = [
+    "El conocimiento es poder.",
+    "Aprender nunca se detiene.",
+    "Tu esfuerzo construye tu futuro.",
+    "La disciplina vence al talento."
+  ];
+  document.getElementById("frase").innerText =
+    frases[Math.floor(Math.random() * frases.length)];
+
+     // Banco de preguntas institucionales
+  const preguntas = [
+    {
+      texto: "¿Qué significa la sigla SENA?",
+      opciones: [
+        "Servicio Nacional de Aprendizaje",
+        "Sistema Nacional de Educación Académica",
+        "Sociedad de Estudiantes Nacionales",
+        "Secretaría Nacional de Aprendizaje"
+      ],
+      correcta: "A"
+    },
+    {
+      texto: "¿En qué año fue creado el SENA?",
+      opciones: ["1957", "1967", "1977", "1987"],
+      correcta: "A"
+    },
+    {
+      texto: "¿Cuál es el color institucional del SENA?",
+      opciones: ["Azul", "Verde", "Rojo", "Amarillo"],
+      correcta: "B"
+    },
+    {
+      texto: "¿Qué figura aparece en el logo del SENA?",
+      opciones: ["Un libro", "Una persona", "Un engranaje", "Una estrella"],
+      correcta: "B"
+    },
+    {
+      texto: "¿Qué tipo de formación ofrece principalmente el SENA?",
+      opciones: [
+        "Formación técnica y tecnológica",
+        "Formación militar",
+        "Formación artística",
+        "Formación política"
+      ],
+      correcta: "A"
+    }
+  ];
+
+  // Selección aleatoria
+  const pregunta = preguntas[Math.floor(Math.random() * preguntas.length)];
+  document.getElementById("pregunta").innerText = pregunta.texto;
+  document.getElementById("opA").innerText = pregunta.opciones[0];
+  document.getElementById("opB").innerText = pregunta.opciones[1];
+  document.getElementById("opC").innerText = pregunta.opciones[2];
+  document.getElementById("opD").innerText = pregunta.opciones[3];
+
+  // Función para responder
+  function responder(opcion){
+    if(opcion === pregunta.correcta){
+      document.getElementById("resultado").innerText = "✅ Correcto!";
+    } else {
+      document.getElementById("resultado").innerText = "❌ Incorrecto. La respuesta correcta era " + pregunta.correcta;
+    }
+  }
+</script>
+</body>
+</html>
+
