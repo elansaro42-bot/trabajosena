@@ -33,7 +33,6 @@
     <li><button id="btn-modo-nocturno">🌙 Activar modo nocturno</button></li>
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#calendario">Calendario</a></li>
-    <li><a href="#clase10">Última clase</a></li>
   </ul>
 </nav>
 
@@ -52,6 +51,9 @@
       <!-- Día 13: Contenedor para la fecha -->
          <p id="fecha-actual"></p>
 </header>
+
+
+
     
 <section id="busqueda">
     <input type="text" id="searchInput" placeholder="Buscar clase...">
@@ -148,6 +150,14 @@ Además, se revisó que toda la información estuviera completa y organizada cor
 <p><strong>Horario:</strong> Martes 02/06/2026 12:30 p.m.</p>
 <p><strong>Descripción:</strong> Hoy en la Clase 12 del SENA se exigió a los aprendices enviar los datos personales faltantes, como identificación y registros académicos, con el fin de garantizar que toda la información esté completa y actualizada para el trabajo final. Esta actividad fue fundamental porque asegura la validez de los procesos institucionales y permite que cada estudiante esté correctamente registrado en el sistema. Además, se trabajó en la elaboración de la ficha técnica de tres computadores, donde se documentaron aspectos como marca, modelo, procesador, memoria RAM, capacidad de almacenamiento, sistema operativo y estado físico de los equipos. Este ejercicio práctico permitió aplicar los conocimientos adquiridos en clases anteriores sobre documentación técnica y reforzó la importancia de registrar información clara y estandarizada. La jornada también sirvió para reflexionar sobre la responsabilidad en el manejo de datos y la necesidad de precisión en cada registro, ya que cualquier error puede afectar el desarrollo del proyecto final. En conclusión, la Clase 12 se convirtió en un espacio clave de validación de información y práctica técnica, aportando directamente a la preparación del trabajo final del SENA y fortaleciendo las competencias de los aprendices en gestión de datos y documentación de equipos.</p>
 </article>
+
+<article id="clase13">
+<h2>Clase 13: Evaluacion</h2>
+<p><strong>Instructor:</strong> Ivone</p>
+<p><strong>Horario:</strong> Jueves 04/06/2026 12:30 p.m.</p>
+<p><strong>Descripción:</strong> En la Clase 13 del SENA se llevó a cabo una evaluación integral que abarcó tanto los conocimientos teóricos como las habilidades prácticas adquiridas a lo largo del curso. La evaluación incluyó preguntas de opción múltiple sobre conceptos clave relacionados con el hardware, software, sistemas operativos y mantenimiento de computadores, así como ejercicios prácticos donde los aprendices debían identificar componentes, elaborar fichas técnicas y resolver problemas técnicos. Esta evaluación tuvo como objetivo medir el nivel de comprensión y aplicación de los contenidos vistos durante las clases, permitiendo a los instructores identificar áreas de mejora y reforzar los conocimientos en futuras sesiones. Además, se brindó retroalimentación personalizada a cada aprendiz para fomentar su crecimiento académico y profesional en el campo tecnológico.</p>
+</article>
+
 <hr class="linea-divisoria">
 
 <!-- Calendario visual multi-mes con animación (Día 12) -->
@@ -192,7 +202,7 @@ Además, se revisó que toda la información estuviera completa y organizada cor
         <h3>Junio 2026</h3>
         <div class="calendar-grid">
             <div class="day clase">2<br>Clase 12<br>12:30 p.m.</div>
-        </div>
+            <div class="day clase">4<br>Clase 13<br>12:30 p.m.</div>
     </div>
 
     <div id="motivacion">
@@ -395,6 +405,9 @@ Además, se revisó que toda la información estuviera completa y organizada cor
       document.getElementById("resultado").innerText = "❌ Incorrecto. La respuesta correcta era " + pregunta.correcta;
     }
   }
+  
+  const boton = document.getElementById("toggle-dark");
+
 </script>
 </body>
 </html>
