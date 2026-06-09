@@ -158,6 +158,13 @@ Además, se revisó que toda la información estuviera completa y organizada cor
 <p><strong>Descripción:</strong> En la Clase 13 del SENA se llevó a cabo una evaluación integral que abarcó tanto los conocimientos teóricos como las habilidades prácticas adquiridas a lo largo del curso. La evaluación incluyó preguntas de opción múltiple sobre conceptos clave relacionados con el hardware, software, sistemas operativos y mantenimiento de computadores, así como ejercicios prácticos donde los aprendices debían identificar componentes, elaborar fichas técnicas y resolver problemas técnicos. Esta evaluación tuvo como objetivo medir el nivel de comprensión y aplicación de los contenidos vistos durante las clases, permitiendo a los instructores identificar áreas de mejora y reforzar los conocimientos en futuras sesiones. Además, se brindó retroalimentación personalizada a cada aprendiz para fomentar su crecimiento académico y profesional en el campo tecnológico.</p>
 </article>
 
+<article id="clase14">
+<h2>Clase 14: Descanso moral</h2>
+<p><strong>Instructor:</strong> Ivone</p>
+<p><strong>Horario:</strong> Martes 09/06/2026 12:30 p.m.</p>
+<p><strong>Descripción:</strong> En la Clase 14 del SENA se dedicó la jornada a un descanso moral, brindando a los aprendices un espacio para relajarse y recargar energías después de semanas intensas de aprendizaje. Durante esta clase, se realizaron actividades recreativas y de bienestar, como ejercicios de estiramiento, dinámicas grupales y momentos de reflexión sobre el progreso académico. Este descanso moral fue fundamental para promover el bienestar emocional y mental de los estudiantes, permitiéndoles desconectar momentáneamente de las exigencias académicas y fortalecer su motivación para continuar con el curso. Además, se fomentó la camaradería entre los aprendices, creando un ambiente positivo y colaborativo que contribuye al éxito del proceso educativo.</p>
+</article>
+
 <hr class="linea-divisoria">
 
 <!-- Calendario visual multi-mes con animación (Día 12) -->
@@ -203,6 +210,7 @@ Además, se revisó que toda la información estuviera completa y organizada cor
         <div class="calendar-grid">
             <div class="day clase">2<br>Clase 12<br>12:30 p.m.</div>
             <div class="day clase">4<br>Clase 13<br>12:30 p.m.</div>
+            <div class="day clase">9<br>Clase 14<br>12:30 p.m.</div>
     </div>
 
     <div id="motivacion">
@@ -211,204 +219,7 @@ Además, se revisó que toda la información estuviera completa y organizada cor
 </div>
 </section>
 
-<!-- Script búsqueda y calendario -->
-<script>
-    // Funcionalidad de búsqueda (Día 9)
-    const searchInput = document.getElementById("searchInput");
-    const searchBtn = document.getElementById("searchBtn");
-    const articles = document.querySelectorAll("#clases article");
-
-    function filtrarClases() {
-        let texto = searchInput.value.toLowerCase();
-        articles.forEach(article => {
-            let contenido = article.innerText.toLowerCase();
-            if (contenido.includes(texto)) {
-                article.style.display = "block";
-            } else {
-                article.style.display = "none";
-            }
-        });
-    }
-
-    searchBtn.addEventListener("click", filtrarClases);
-    searchInput.addEventListener("keyup", filtrarClases);
-
-    // Activación calendario con animación (Día 12)
-    const calendarIcon = document.getElementById("calendarIcon");
-    const calendar = document.getElementById("calendario");
-
-    calendarIcon.addEventListener("click", () => {
-        if (calendar.classList.contains("visible")) {
-            calendar.classList.remove("visible");
-            setTimeout(() => {
-                calendar.style.display = "none";
-            }, 500);
-        } else {
-            calendar.style.display = "block";
-            setTimeout(() => {
-                calendar.classList.add("visible");
-            }, 10);
-        }
-    });
-
-    // Navegación entre meses (Día 11)
-    function mostrarMes(mesId) {
-        const meses = document.querySelectorAll(".mes");
-        meses.forEach(mes => {
-            mes.style.display = "none";
-        });
-        document.getElementById(mesId).style.display = "block";
-    }
-
-  // Día 13: Mostrar fecha actual automáticamente
-  const fechaElemento = document.getElementById("fecha-actual");
-  const hoy = new Date();
-
-  // Opciones para mostrar la fecha en español
-  const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
-  // Convertir fecha a texto
-  fechaElemento.textContent = "Hoy es " + hoy.toLocaleDateString('es-ES', opciones);
-
-  // Día 15: Mostrar solo la hora actual
-  function actualizarHora() {
-    const horaElemento = document.getElementById("hora-actual");
-    const ahora = new Date();
-
-    // Opciones para mostrar la hora en formato 24h
-    const opciones = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-
-    horaElemento.textContent = ahora.toLocaleTimeString('es-ES', opciones);
-  }
-
-  // Actualizar cada segundo
-  setInterval(actualizarHora, 1000);
-
-  // Llamada inicial
-  actualizarHora();
-
-  // Día 17: Botón dinámico a última clase actual
-  document.getElementById("btn-ultima-clase").addEventListener("click", function() {
-    // Selecciona todas las clases del listado
-    const clases = document.querySelectorAll("#clases article");
-
-    if (clases.length > 0) {
-      // Obtiene la última clase actual
-      const ultimaClase = clases[clases.length - 1];
-
-      // Hace scroll hasta la última clase
-      ultimaClase.scrollIntoView({ behavior: "smooth", block: "center" });
-
-      // Resalta la última clase para identificarla
-      ultimaClase.classList.add("resaltada");
-    }
-  });
-
-  // Día 18: Mostrar calendario automáticamente al cargar
-  window.addEventListener("DOMContentLoaded", function() {
-    const calendario = document.getElementById("calendario");
-    calendario.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-
-  const btnModoNocturno = document.getElementById("btn-modo-nocturno");
-  btnModoNocturno.addEventListener("click", function() {
-    document.body.classList.toggle("modo-nocturno");
-    document.getElementById("barra-superior").classList.toggle("modo-nocturno");
-    document.getElementById("calendario").classList.toggle("modo-nocturno");
-
-    // Cambiar texto del botón
-    if (document.body.classList.contains("modo-nocturno")) {
-      btnModoNocturno.textContent = "☀️ Desactivar modo nocturno";
-    } else {
-      btnModoNocturno.textContent = "🌙 Activar modo nocturno";
-    }
-  });
-  
-  window.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("bienvenida");
-
-    // Mostrar el mensaje
-    popup.classList.add("mostrar");
-
-    // Después de 4 segundos, aplicar desvanecer
-    setTimeout(() => {
-      popup.classList.add("ocultar");
-    }, 4000);
-
-    // Después de 5 segundos, ocultar completamente
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 5000);
-  });
-
-  const frases = [
-    "El conocimiento es poder.",
-    "Aprender nunca se detiene.",
-    "Tu esfuerzo construye tu futuro.",
-    "La disciplina vence al talento."
-  ];
-  document.getElementById("frase").innerText =
-    frases[Math.floor(Math.random() * frases.length)];
-
-     // Banco de preguntas institucionales
-  const preguntas = [
-    {
-      texto: "¿Qué significa la sigla SENA?",
-      opciones: [
-        "Servicio Nacional de Aprendizaje",
-        "Sistema Nacional de Educación Académica",
-        "Sociedad de Estudiantes Nacionales",
-        "Secretaría Nacional de Aprendizaje"
-      ],
-      correcta: "A"
-    },
-    {
-      texto: "¿En qué año fue creado el SENA?",
-      opciones: ["1957", "1967", "1977", "1987"],
-      correcta: "A"
-    },
-    {
-      texto: "¿Cuál es el color institucional del SENA?",
-      opciones: ["Azul", "Verde", "Rojo", "Amarillo"],
-      correcta: "B"
-    },
-    {
-      texto: "¿Qué figura aparece en el logo del SENA?",
-      opciones: ["Un libro", "Una persona", "Un engranaje", "Una estrella"],
-      correcta: "B"
-    },
-    {
-      texto: "¿Qué tipo de formación ofrece principalmente el SENA?",
-      opciones: [
-        "Formación técnica y tecnológica",
-        "Formación militar",
-        "Formación artística",
-        "Formación política"
-      ],
-      correcta: "A"
-    }
-  ];
-
-  // Selección aleatoria
-  const pregunta = preguntas[Math.floor(Math.random() * preguntas.length)];
-  document.getElementById("pregunta").innerText = pregunta.texto;
-  document.getElementById("opA").innerText = pregunta.opciones[0];
-  document.getElementById("opB").innerText = pregunta.opciones[1];
-  document.getElementById("opC").innerText = pregunta.opciones[2];
-  document.getElementById("opD").innerText = pregunta.opciones[3];
-
-  // Función para responder
-  function responder(opcion){
-    if(opcion === pregunta.correcta){
-      document.getElementById("resultado").innerText = "✅ Correcto!";
-    } else {
-      document.getElementById("resultado").innerText = "❌ Incorrecto. La respuesta correcta era " + pregunta.correcta;
-    }
-  }
-  
-  const boton = document.getElementById("toggle-dark");
-
-</script>
+<script src="scrip.js"></script>
 </body>
 </html>
 
