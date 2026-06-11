@@ -459,4 +459,16 @@ body.modo-nocturno #hora-actual {
   gap: 6px;
 }
 
+body.modo-oscuro {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3 {
+  color: #c8f7c5; /* verde institucional claro */
+}
+
+
 
