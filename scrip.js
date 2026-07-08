@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (fechaEl) {
     const actualizarFecha = () => {
       const ahora = new Date();
-      fechaEl.textContent = ahora.toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });
+      fechaEl.textContent = `Hoy: ${ahora.toLocaleDateString('es-CO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`;
     };
     actualizarFecha();
   }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Calendario: cambiar mes (si existen los contenedores)
 window.mostrarMes = function (mes) {
-  const ids = ['abril', 'mayo', 'junio'];
+  const ids = ['abril', 'mayo', 'junio', 'julio'];
   ids.forEach((id) => {
     const el = document.getElementById(id);
     if (el) el.style.display = id === mes ? 'block' : 'none';
